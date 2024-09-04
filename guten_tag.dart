@@ -12,11 +12,15 @@ class GoodDay {
   void sayGoodDay() {
     print("Guten Tag, $name");
   }
+
+  void changeName(String newName) {
+    name = newName;
+  }
 }
 
 void main() {
   GoodDay name1 = GoodDay("Sascha");
   name1.sayGoodDay();
-  name1.name = "Kai";
+  name1.changeName("Kai");
   name1.sayGoodDay();
 }
