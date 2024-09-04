@@ -5,6 +5,10 @@ class Person {
 
   Person(this.name, this.age, this.personsAdress);
 
+  void newAdress(Adress newAdress) {
+    personsAdress = newAdress;
+  }
+
   String newName(String newName) {
     return name = newName;
   }
@@ -22,5 +26,3 @@ class Adress {
 
   Adress(this.streetName, this.houseNumber, this.zipCode, this.location);
 }
-
-

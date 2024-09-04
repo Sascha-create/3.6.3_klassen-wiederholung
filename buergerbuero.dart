@@ -5,7 +5,11 @@ class CitizensOffice {
   List<Person> persons;
 
   CitizensOffice(this.persons);
-
+/*
+  void changeAdress(){
+    
+  }
+*/
   void capturePersons() {
     print("Es sind insgesamt ${persons.length} Personen im Büro.");
   }
@@ -26,6 +30,8 @@ void main() {
   Person kai = Person("Kai Hatje", 22, kaisAdress);
   Adress sobhisAdress = Adress("Dartstrasse", 7, 76448, "Darthausen");
   Person sobhi = Person("Sobhi Hammoud", 40, sobhisAdress);
+  Adress dennisAdress = Adress("maxmusterstrasse", 1, 1234, "Musterort");
+  Person dennis = Person("Dennis Durmus", 18, dennisAdress);
 
   List<Person> actualPersons = [
     Person("Kai Hatje", 22, kaisAdress),
@@ -35,4 +41,10 @@ void main() {
   CitizensOffice nameChangeOffice = CitizensOffice(actualPersons);
   nameChangeOffice.capturePersons();
   nameChangeOffice.wichPersons();
+
+  kai.newAdress(Adress("Flutterstrasse", 10, 76877, "Flutterhausen"));
+  
+  print(kai.personsAdress.streetName);
+  dennis.newAdress(kaisAdress);
+  print(dennis.personsAdress.streetName);
 }
